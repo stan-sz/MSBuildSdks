@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <EnableGitVersioning>false</EnableGitVersioning>
+  </PropertyGroup>
+  <Target Name="PublishB" AfterTargets="Publish">
+    <Message Text="Publish of $(MSBuildProjectFullPath)"/>
+  </Target>
+  <ItemGroup>
+    <ProjectReference Include="../ProjA/proja.proj" />
+  </ItemGroup>
+</Project>
